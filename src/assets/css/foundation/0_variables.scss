@@ -1,0 +1,54 @@
+$bp-lpc: 1566px;
+$bp-pc: 1200px;
+$bp-pcOnly: 1025px;
+$bp-tb: 768px; 
+$bp-sp: 481px;
+
+$path-img: "../img/";
+$path-root: "/";
+
+$color-base: #fff;
+$color-main: #333399;
+$color-sub: #8d99ac;
+$color-accent: #333;
+$color-caution: #e82b2b;
+$color-link: #666;
+$color-placeholder: #999;
+$color-black: #21344a;
+$color-gray: #e0e0e0;
+$keycolor: #5f1ae8;
+
+$font-size-base: 10;
+$font-size-xxs: 10px;
+$font-size-xs: 12px;
+$font-size-sm: 14px;
+$font-size-md: 16px;
+$font-size-lg: 18px;
+$font-size-xl: 20px;
+$font-size-xxl: 22px;
+
+$font-barlow: 'Barlow', sans-serif;
+$font-josefin: 'Josefin Sans', sans-serif;
+
+$width-base-sp: 375;
+$width-base-tb: 1000;
+$width-base-pc: 1280;
+$contents-max-pc: 1920px;
+$contents-min-pc: 1000px;
+$contents-max_rem-pc: 192rem;
+$contents-min_rem-pc: 100rem;
+
+@mixin transition {
+    transition: all 0.3s ease;
+}
+
+//hover
+@mixin hover {
+    @include media(pcOnly) {
+        .is-view-pc & {
+            &:hover {
+                @content;
+            }
+        }
+    }
+}

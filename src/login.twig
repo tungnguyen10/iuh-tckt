@@ -1,0 +1,36 @@
+{% extends "./_templates/layout.twig" %}
+
+{# If rename this file, rename in gulp 'html' task as well #}
+{% block page %}
+{% include './_templates/components/_Breadcrumb.twig' %}
+
+<div class="login-page" data-module="LoginToggle">
+  <div class="l-inner ">
+    <div class="form">
+      <form class="register-form">
+        <input type="text" placeholder="Name" />
+        <input type="password" placeholder="Password" />
+        <input type="text" placeholder="Email Address" />
+        <button class="btn1 rotate-button">
+          <span class="rotate-button-face">ĐĂNG KÝ</span>
+          <span class="rotate-button-face-back">Click</span>
+        </button>
+        <p class="message">Already registered?
+          <a href="#">Sign In</a>
+        </p>
+      </form>
+      <form class="login-form">
+        <input type="text" placeholder="Username" />
+        <input type="password" placeholder="Password" />
+        <button class="btn1 rotate-button">
+          <span class="rotate-button-face">ĐĂNG NHẬP</span>
+          <span class="rotate-button-face-back">Click</span>
+        </button>
+        <p class="message">Not registered?
+          <a href="#">Create an account</a>
+        </p>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

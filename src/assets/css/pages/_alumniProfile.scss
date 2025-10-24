@@ -1,0 +1,250 @@
+.l-alumniProfile {
+  background: url(../images/top/alumniProfile-bg.jpg) no-repeat top center/cover;
+  padding: px-rem(48) 0 0;
+  color: $color-base;
+
+  @include media(sp) {
+    padding: px-rem(30) 0 0;
+  }
+
+  .element-title {
+    text-align: center;
+    margin-bottom: px-rem(33);
+
+    @include media(sp) {
+      margin-bottom: px-rem(20);
+    }
+
+    &__small {
+      font-size: px-rem(18);
+    }
+  }
+
+  .l-alumniProfile__list {
+    padding-bottom: px-rem(44);
+
+    @include media(sp) {
+      padding-bottom: px-rem(30);
+    }
+    .slick-slide{
+      width: px-rem(570);
+      background: #fff;
+      border-radius: px-rem(10);
+      margin-right: px-rem(30);
+      padding: px-rem(24) px-rem(30) px-rem(42) px-rem(25);
+      position: relative;
+      box-sizing: border-box;
+
+      @include media(pcOnly) {
+        &:hover {
+          .icon-quote i {
+            color: #333399;
+          }
+        }
+      }
+
+      @include media(tb) {
+        width: px-rem(594);
+      }
+
+      @include media(sp) {
+        width: px-rem(334);
+        padding: px-rem(20) px-rem(25);
+      }
+    }
+    .alumniProfile-box {
+      .icon-quote {
+        position: absolute;
+        top: px-rem(38);
+        right: px-rem(30);
+
+        i {
+          font-size: px-rem(35);
+          color: #f2f2f2;
+        }
+      }
+
+      .alumniProfile-info {
+        display: flex;
+        align-items: center;
+        padding-bottom: px-rem(14);
+
+        @include media(sp) {
+          padding-bottom: px-rem(10);
+        }
+
+        .alumniProfile-img {
+          width: px-rem(150);
+          height: px-rem(150);
+          border-radius: 50%;
+          overflow: hidden;
+
+          @include media(sp) {
+            width: px-rem(100);
+            height: px-rem(100);
+          }
+
+          img {
+            object-fit: cover;
+            border-radius: 50%;
+          }
+        }
+
+        .alumniProfile-inner {
+          padding-left: px-rem(25);
+          width: calc(100% - 16.5rem);
+
+          @include media(sp) {
+            padding-left: px-rem(15);
+          }
+
+          .alumniProfile-ttl {
+            color: #333333;
+            text-transform: uppercase;
+            font-size: px-rem(20);
+            line-height: 1.25;
+            padding-bottom: px-rem(10);
+            font-weight: 500;
+
+            @include media(sp) {
+              font-size: px-rem(18);
+            }
+          }
+
+          .alumniProfile-position {
+            color: #333399;
+            font-size: px-rem(17);
+            line-height: 1.47;
+
+            @include media(sp) {
+              font-size: px-rem(14);
+            }
+          }
+        }
+      }
+
+      .alumniProfile-txt {
+        color: #666;
+        font-size: px-rem(16);
+        line-height: 1.875;
+        font-style: italic;
+        text-align: justify;
+      }
+    }
+
+    .slider__arrows {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: px-rem(34);
+
+      @include media(sp) {
+        justify-content: center;
+        margin-top: px-rem(20);
+      }
+
+      .arrow-icon {
+        width: px-rem(60);
+        height: px-rem(60);
+        background: #fff;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        margin: 0 px-rem(10);
+
+        @include media(sp) {
+          width: px-rem(40);
+          height: px-rem(40);
+        }
+
+        @include media(pcOnly) {
+          &:hover {
+            i {
+              color: #333399;
+            }
+          }
+        }
+
+        i {
+          color: #000;
+          font-size: px-rem(25);
+        }
+      }
+
+    }
+  }
+
+  &__intro {
+    background: #ff0000;
+    border-radius: px-rem(15) px-rem(15) 0 0;
+    padding: px-rem(45) 0 px-rem(37);
+    display: flex;
+    flex-wrap: wrap;
+
+    @include media(sp) {
+      padding: px-rem(20) px-rem(10) px-rem(20);
+    }
+
+    .intro-box {
+      width: 25%;
+      padding: 0 px-rem(20) 0 px-rem(27);
+      display: flex;
+      align-items: flex-start;
+      box-sizing: border-box;
+
+      @include media(sp) {
+        width: 70%;
+        margin: 0 auto;
+        padding: px-rem(10) px-rem(10) px-rem(10);
+      }
+
+      &__img {
+        width: px-rem(68);
+        flex-shrink: 1;
+
+        @include media(sp) {
+          width: px-rem(50);
+        }
+      }
+
+      &__inner {
+        padding-left: px-rem(15);
+
+        @include media(sp) {
+          padding-left: px-rem(10);
+        }
+
+        .num {
+          font-size: px-rem(35);
+          font-weight: 500;
+          display: flex;
+          align-items: flex-start;
+          line-height: 1;
+          padding-bottom: px-rem(7);
+
+          @include media(sp) {
+            font-size: px-rem(25);
+          }
+
+          span {
+            font-size: px-rem(20);
+
+            @include media(sp) {
+              font-size: px-rem(15);
+            }
+          }
+        }
+
+        .title {
+          font-size: px-rem(18);
+
+          @include media(sp) {
+            font-size: px-rem(15);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,185 @@
+.btn1 {
+  position: relative;
+  width: px-rem(200);
+  height: px-rem(40);
+  text-align: center;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  transition: all .3s ease;
+  margin-top: px-rem(15);
+
+  @include media(sp) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &.rotate-button {
+    display: block;
+
+    .rotate-button-face,
+    .rotate-button-face-back {
+      position: absolute;
+      display: block;
+      border: 1px solid $color-main;
+      transition: all .5s;
+      color: $color-main;
+      text-decoration: none;
+      width: px-rem(200);
+      height: px-rem(40);
+      line-height: px-rem(40);
+      border-radius: 4px;
+      text-transform: uppercase;
+      font-weight: 500;
+      top: 0;
+    }
+
+    .rotate-button-face {
+      background-color: #fff;
+      transform: translateZ(15px);
+    }
+
+    .rotate-button-face-back {
+      background: linear-gradient(90deg, #fd0001 0%, #991a4d 50%, #353398 100%);
+      color: $color-base;
+      border: 0px;
+      transform: rotateX(-90deg) translateZ(15px);
+    }
+
+    &:hover {
+      transform: rotateX(90deg);
+    }
+  }
+}
+
+.btn {
+  box-sizing: border-box;
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #333399;
+  border-radius: 0.6em;
+  color: #333399;
+  cursor: pointer;
+  display: flex;
+  align-self: center;
+  font-size: 1.8rem;
+  line-height: 1;
+  margin: px-rem(20);
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2.8rem;
+
+  @include media(sp) {
+    margin: px-rem(10);
+  }
+
+  &:hover {
+    color: #fff !important;
+    outline: 0;
+  }
+
+  &__first {
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+
+    &:hover {
+      box-shadow: 0 0 40px 40px $color-main inset;
+    }
+  }
+  // BUTTON 4
+  &__fourth {
+   margin: 0 2rem;
+    border-color: $color-sub;
+    color: $color-sub;
+    @include media(sp){
+      padding: 0.7rem 2rem;
+    }
+    background: {
+      image: linear-gradient(45deg,$color-sub 50%, transparent 50%);
+      position: 100%;
+      size: 400%;
+    }
+    transition: background 0.5s ease-in-out;
+    
+    &:hover {
+      background-position: 0;
+    }
+  }
+}
+
+.btn-view{
+  display: block;
+  position: relative;
+  color: white;
+  font-size: px-rem(22px);
+  background: #333395; 
+  background: linear-gradient(to right, #333395 0%,#ff0000 100%);
+  padding: px-rem(8px) px-rem(20px);
+  border-radius: px-rem(30px);
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  @include media(sp){
+    padding: px-rem(5px) px-rem(20px);
+    font-size: px-rem(18px);
+    width: 100%;
+  }
+  &:hover{
+    background: radial-gradient(circle, #333395, #891593, #c80078, #f1004c, #ff0000) !important;
+  }
+}
+.btn-bar{
+  position: relative;
+  width: px-rem(50px);
+  height: px-rem(50px);
+  overflow: hidden;
+  border-radius: 50%;
+  border: 1px solid $color-link;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+  i{
+    font-size: px-rem(22px);
+  }
+  @include media(sp){
+    width: px-rem(40px);
+    height: px-rem(40px);
+    i{
+      font-size: px-rem(18px);
+    }
+  }
+  
+}
+.event-link {
+  font-weight: 500;
+  position: relative;
+  letter-spacing: 0.001em;
+
+  @include media(sp) {
+    font-size: px-rem(14);
+  }
+
+  @include media(pcOnly) {
+    &:hover {
+      &::before {
+        right: px-rem(-30);
+      }
+    }
+  }
+
+  &::before {
+    background: url(../images/top/icon-arrow.png) no-repeat;
+    background-size: contain;
+    width: px-rem(16);
+    height: px-rem(13);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: px-rem(-20);
+    transition: all 0.3s ease;
+    content: '';
+  }
+}

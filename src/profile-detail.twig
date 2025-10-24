@@ -1,0 +1,525 @@
+{% extends "./_templates/layout.twig" %}
+
+{# If rename this file, rename in gulp 'html' task as well #}
+{% block page %}
+{% include './_templates/components/_Breadcrumb.twig' %}
+<div class="profile-detaill" data-module="ProfileTab">
+  <div class="l-inner">
+    <div class="profile-detaill__information">
+      <div class="profile-detaill__photo">
+        <div>
+          <p><img src="assets/images/profile/profile.jpg" alt="profile"></p>
+          <ul class="icon-sns">
+            <li><a class="i-fb" href="#" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+            <li><a class="i-ins" href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <li><a class="i-twi" href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="profile-detaill__inforShow">
+        <h2 class="element-title">Thông tin sinh viên 
+          {# <label class="edit-profile-information edit-profile"
+            data-profile="profile-information"><i class="fas fa-edit"></i></label> #}
+        </h2>
+        <dl>
+          <dt>Họ tên:</dt>
+          <dd>Trần Văn Anh</dd>
+        </dl>
+        <dl>
+          <dt>Năm sinh:</dt>
+          <dd>10/02/1993</dd>
+        </dl>
+        <dl>
+          <dt>Lớp:</dt>
+          <dd>10cd1102</dd>
+        </dl>
+        <dl>
+          <dt>Khoa:</dt>
+          <dd>Công Nghệ Thông Tin</dd>
+        </dl>
+        <dl>
+          <dt>Điện thoại:</dt>
+          <dd>0963256235</dd>
+        </dl>
+        <dl>
+          <dt>Email:</dt>
+          <dd>dhcn@iuh.edu.vn</dd>
+        </dl>
+        <dl>
+          <dt>Chức vụ:</dt>
+          <dd>CEO-TIKI</dd>
+        </dl>
+        <dl>
+          <dt>Địa chỉ:</dt>
+          <dd>Số 12 Nguyễn Văn Bảo, Phường 4, Quận Gò Vấp,
+            Thành phố Hồ Chí Minh</dd>
+        </dl>
+
+      </div>
+
+    </div>
+    <div class="profile-detaill__experience">
+      <div class="tabs js-slidetabs">
+        <div class="tab-link current">
+          <p>2021</p>
+        </div>
+        <div class="tab-link">
+          <p>2022</p>
+        </div>
+        <div class="tab-link">
+          <p>2023</p>
+        </div>
+        <div class="tab-link">
+          <p>2024</p>
+        </div>
+      </div>
+
+
+      <div class="profile-detaill__experience_content">
+        <div class="slider__arrows">
+          <div class="arrow-icon arrow--prev03"><i class="fas fa-angle-left"></i></div>
+          <div class="arrow-icon arrow--next03"><i class="fas fa-angle-right"></i></div>
+        </div>
+        {# <p class="btn btn__fourth btn_add__experience edit-profile" data-profile="add-experience"><i
+            class="fas fa-plus-circle"></i></p> #}
+        <div class="js-slidetabs-for">
+          <div class="tab-content">
+            <h2 class="element-title">quá trình công tác</h2>
+            <div class="resume-content">
+              <h6 class="uppercase"><span>Front-end Developer - </span>Vien
+                Nam solutions</h6>
+              <span class="date"><i class="far fa-calendar-alt"></i> 2/2018 -
+                1/2019</span>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex
+                ea commodo consequat.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex
+                ea commodo consequat.</p>
+            </div>
+            <div class="resume-content">
+              <h6 class="uppercase"><span>Front-end Developer - </span>Vien
+                Nam solutions</h6>
+              <span class="date"><i class="far fa-calendar-alt"></i> 2/2018 -
+                1/2019</span>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex
+                ea commodo consequat.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex
+                ea commodo consequat.</p>
+            </div>
+            {# <p class="btn-save-cancel">
+              <a class="btn btn__first edit-profile" data-profile="experience-2021">Cập nhật</a>
+              <a class="btn btn__first profile-close">Xoá</a>
+            </p> #}
+          </div>
+          <div class="tab-content">
+            <h2 class="element-title">quá trình công tác</h2>
+            <div class="resume-content">
+              <h6 class="uppercase"><span>Front-end Developer - </span>Vien
+                Nam solutions</h6>
+              <span class="date"><i class="far fa-calendar-alt"></i> 2/2018 -
+                1/2019</span>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex
+                ea commodo consequat.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex
+                ea commodo consequat.</p>
+            </div>
+            {# <p class="btn-save-cancel">
+              <a class="btn btn__first edit-profile" data-profile="experience-2022">Cập nhật</a>
+              <a class="profile-close btn btn__first">Xoá</a>
+            </p> #}
+          </div>
+          <div class="tab-content">
+            <h2 class="element-title">quá trình công tác</h2>
+            <div class="resume-content">
+              <h6 class="uppercase"><span>Front-end Developer - </span>Vien
+                Nam solutions</h6>
+              <span class="date"><i class="far fa-calendar-alt"></i> 2/2018 -
+                1/2019</span>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex
+                ea commodo consequat.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex
+                ea commodo consequat.</p>
+            </div>
+            <p class="btn-save-cancel">
+              <a class="btn btn__first edit-profile" data-profile="experience-2023">Cập nhật</a>
+              <a class="profile-close btn btn__first">Xoá</a>
+            </p>
+          </div>
+          <div class="tab-content">
+            <h2 class="element-title">quá trình công tác</h2>
+            <div class="resume-content">
+              <h6 class="uppercase"><span>Front-end Developer - </span>Vien
+                Nam solutions</h6>
+              <span class="date"><i class="far fa-calendar-alt"></i> 2/2018 -
+                1/2019</span>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex
+                ea commodo consequat.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex
+                ea commodo consequat.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex
+                ea commodo consequat.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex
+                ea commodo consequat.</p>
+            </div>
+            {# <p class="btn-save-cancel">
+              <a class="btn btn__first edit-profile" data-profile="experience-2024">Cập nhật</a>
+              <a class="btn btn__first">Xoá</a>
+            </p> #}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {# <div class="model-profile">
+    <div class="model-profile-bg"></div>
+    <div id="profile-information" class="profile-content">
+      <div class="l-inner">
+        <div class="profile-detaill__information">
+          <div class="profile-detaill__photo">
+            <div>
+              <img src="assets/images/profile/profile.jpg" alt="profile">
+              <div class="upload-image">
+                <fieldset>
+                  <input type="file" multiple class="file-loading">
+                </fieldset>
+              </div>
+
+            </div>
+
+          </div>
+          <div class="profile-detaill__inforShow">
+            <h2 class="element-title">Thông tin sinh viên </h2>
+            <dl>
+              <dt>Họ tên:</dt>
+              <dd class="edit-profile-information-detail">
+                <p>Trần Văn Anh <i class="fas fa-edit"></i></p>
+                <fieldset>
+                  <input class="form-control" type="text">
+                </fieldset>
+              </dd>
+            </dl>
+            <dl>
+              <dt>Năm sinh:</dt>
+              <dd class="edit-profile-information-detail">
+                <p>10/02/1993 <i class="fas fa-edit"></i></p>
+                <fieldset>
+                  <input class="form-control" type="date">
+                </fieldset>
+              </dd>
+            </dl>
+            <dl>
+              <dt>Lớp:</dt>
+              <dd class="edit-profile-information-detail">
+                <p> 10cd1102<i class="fas fa-edit"></i></p>
+                <fieldset>
+                  <input class="form-control" type="text">
+                </fieldset>
+              </dd>
+            </dl>
+            <dl>
+              <dt>Khoa:</dt>
+              <dd class="edit-profile-information-detail">
+                <p> Công Nghệ Thông Tin<i class="fas fa-edit"></i></p>
+                <fieldset>
+                  <input class="form-control" type="text">
+                </fieldset>
+              </dd>
+            </dl>
+            <dl>
+              <dt>Điện thoại:</dt>
+              <dd class="edit-profile-information-detail">
+                <p> 0963256235<i class="fas fa-edit"></i></p>
+                <fieldset>
+                  <input class="form-control" type="text">
+                </fieldset>
+              </dd>
+            </dl>
+            <dl>
+              <dt>Email:</dt>
+              <dd class="edit-profile-information-detail">
+                <p> dhcn@iuh.edu.vn<i class="fas fa-edit"></i></p>
+                <fieldset>
+                  <input class="form-control" type="text">
+                </fieldset>
+              </dd>
+            </dl>
+            <dl>
+              <dt>Chức vụ:</dt>
+              <dd class="edit-profile-information-detail">
+                <p> CEO-TIKI<i class="fas fa-edit"></i></p>
+                <fieldset>
+                  <input class="form-control" type="text">
+                </fieldset>
+              </dd>
+            </dl>
+            <dl>
+              <dt>Địa chỉ:</dt>
+              <dd class="edit-profile-information-detail">
+                <p>Số 12 Nguyễn Văn Bảo, Phường 4, Quận Gò Vấp,
+                  Thành phố Hồ Chí Minh <i class="fas fa-edit"></i></p>
+                <fieldset>
+                  <input class="form-control" type="text">
+                </fieldset>
+              </dd>
+            </dl>
+            <p class="btn-save-cancel">
+              <a class="btn btn__first">Lưu</a>
+              <a class="profile-close btn btn__first">Huỷ bỏ</a>
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div id="experience-2021" class="profile-content">
+      <div class="l-inner">
+        <form>
+          <div class="form-signup">
+            <div class="experience_title">
+              <h2 class="element-title">quá trình công tác </h2>
+              <p class="btn-save-cancel">
+                <a class="btn btn__fourth btn_add"><i class="fas fa-plus-circle"></i></a>
+                <a class="btn btn__fourth btn_remove"><i class="far fa-trash-alt"></i></a>
+              </p>
+            </div>
+            <div class="process_experience">
+              <div class="row group_contact1">
+                <fieldset class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                  <label>Năm:</label>
+                  <input class="form-control"  name="year" type="date">
+                </fieldset>
+                <fieldset class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                  <label>Vị trí công việc:</label>
+                  <input class="form-control" type="text">
+                </fieldset>
+                <fieldset class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                  <label>Ngày bắt đầu:</label>
+                  <input class="form-control" type="date">
+                </fieldset>
+                <fieldset class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                  <label>Ngày kết thúc:</label>
+                  <input class="form-control" type="date">
+                </fieldset>
+                <fieldset class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <label>Mô tả:</label>
+                  <textarea class="form-control content-area" rows="5"></textarea> 
+                </fieldset>
+              </div>
+
+            </div>
+
+            <p class="btn-save-cancel">
+              <a class="btn btn__first">Lưu</a>
+              <a class="profile-close btn btn__first">Huỷ bỏ</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div id="experience-2022" class="profile-content">
+      <div class="l-inner">
+        <form>
+          <div class="form-signup">
+            <div class="experience_title">
+              <h2 class="element-title">quá trình công tác</h2>
+              <p class="btn-save-cancel">
+                <a class="btn btn__fourth btn_add"><i class="fas fa-plus-circle"></i></a>
+                <a class="btn btn__fourth btn_remove"><i class="far fa-trash-alt"></i></a>
+              </p>
+            </div>
+            <div class="process_experience">
+              <div class="row group_contact1">
+                <fieldset class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                  <label>Năm:</label>
+                  <input class="form-control"  name="year" type="date">
+                </fieldset>
+                <fieldset class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                  <label>Vị trí công việc:</label>
+                  <input class="form-control" type="text">
+                </fieldset>
+                <fieldset class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                  <label>Ngày bắt đầu:</label>
+                  <input class="form-control" type="date">
+                </fieldset>
+                <fieldset class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                  <label>Ngày kết thúc:</label>
+                  <input class="form-control" type="date">
+                </fieldset>
+                <fieldset class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <label>Mô tả:</label>
+                  <textarea class="form-control content-area" rows="5"></textarea> 
+                </fieldset>
+              </div>
+
+            </div>
+
+            <p class="btn-save-cancel">
+              <a class="btn btn__first">Lưu</a>
+              <a class="profile-close btn btn__first">Huỷ bỏ</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div id="experience-2023" class="profile-content">
+      <div class="l-inner">
+        <form>
+          <div class="form-signup">
+            <div class="experience_title">
+              <h2 class="element-title">quá trình công tác</h2>
+              <p class="btn-save-cancel">
+                <a class="btn btn__fourth btn_add"><i class="fas fa-plus-circle"></i></a>
+                <a class="btn btn__fourth btn_remove"><i class="far fa-trash-alt"></i></a>
+              </p>
+            </div>
+            <div class="process_experience">
+              <div class="row group_contact1">
+                <fieldset class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                  <label>Năm:</label>
+                  <input class="form-control"  name="year" type="date">
+                </fieldset>
+                <fieldset class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                  <label>Vị trí công việc:</label>
+                  <input class="form-control" type="text">
+                </fieldset>
+                <fieldset class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                  <label>Ngày bắt đầu:</label>
+                  <input class="form-control" type="date">
+                </fieldset>
+                <fieldset class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                  <label>Ngày kết thúc:</label>
+                  <input class="form-control" type="date">
+                </fieldset>
+                <fieldset class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <label>Mô tả:</label>
+                  <textarea class="form-control content-area" rows="5"></textarea> 
+                </fieldset>
+              </div>
+
+            </div>
+
+            <p class="btn-save-cancel">
+              <a class="btn btn__first">Lưu</a>
+              <a class="profile-close btn btn__first">Huỷ bỏ</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div id="experience-2024" class="profile-content">
+      <div class="l-inner">
+        <form>
+          <div class="form-signup">
+            <div class="experience_title">
+              <h2 class="element-title">quá trình công tác</h2>
+              <p class="btn-save-cancel">
+                <a class="btn btn__fourth btn_add"><i class="fas fa-plus-circle"></i></a>
+                <a class="btn btn__fourth btn_remove"><i class="far fa-trash-alt"></i></a>
+              </p>
+            </div>
+            <div class="process_experience">
+              <div class="row group_contact1">
+                <fieldset class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                  <label>Năm:</label>
+                  <input class="form-control"  name="year" type="date">
+                </fieldset>
+                <fieldset class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                  <label>Vị trí công việc:</label>
+                  <input class="form-control" type="text">
+                </fieldset>
+                <fieldset class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                  <label>Ngày bắt đầu:</label>
+                  <input class="form-control" type="date">
+                </fieldset>
+                <fieldset class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                  <label>Ngày kết thúc:</label>
+                  <input class="form-control" type="date">
+                </fieldset>
+                <fieldset class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <label>Mô tả:</label>
+                  <textarea class="form-control content-area" rows="5"></textarea> 
+                </fieldset>
+              </div>
+
+            </div>
+
+            <p class="btn-save-cancel">
+              <a class="btn btn__first">Lưu</a>
+              <a class="profile-close btn btn__first">Huỷ bỏ</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div id="add-experience" class="profile-content"> 
+      <div class="l-inner">
+        <form >
+          <div class="form-signup">
+            <div class="experience_title">
+              <h2 class="element-title">quá trình công tác</h2>
+              <p class="btn-save-cancel">
+                <a class="btn btn__fourth btn_add"><i class="fas fa-plus-circle"></i></a>
+                <a class="btn btn__fourth btn_remove"><i class="far fa-trash-alt"></i></a>
+              </p>
+            </div>
+            <div class="process_experience">
+              <div class="row group_contact1">
+                <fieldset class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                  <label>Năm:</label>
+                  <input class="form-control"  name="year" type="date">
+                </fieldset>
+                <fieldset class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                  <label>Vị trí công việc:</label>
+                  <input class="form-control" type="text">
+                </fieldset>
+                <fieldset class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                  <label>Ngày bắt đầu:</label>
+                  <input class="form-control" type="date">
+                </fieldset>
+                <fieldset class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                  <label>Ngày kết thúc:</label>
+                  <input class="form-control" type="date">
+                </fieldset>
+                <fieldset class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <label>Mô tả:</label>
+                  <textarea class="form-control content-area" rows="5"></textarea>
+                </fieldset>
+              </div>
+
+            </div>
+
+            <p class="btn-save-cancel">
+              <a class="btn btn__first">Lưu</a>
+              <a class="profile-close btn btn__first">Huỷ bỏ</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div> #}
+</div>
+{% endblock %}

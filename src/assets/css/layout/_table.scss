@@ -1,0 +1,156 @@
+.table-wrapper {
+    margin: 50px 0 ;
+    box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    display: block;
+    @include media(sp){
+      margin-right: -15px;
+      width: auto;
+    }
+    .action-link{
+      display: block;
+      font-size: 16px;
+      margin: 0;
+      color: #ef4136;
+      @include hover{
+        color: $keycolor;
+      }
+    }
+    .fl-table {
+      border-radius: 5px;
+      font-size: 12px;
+      font-weight: normal;
+      border: none;
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 100%;
+      white-space: nowrap;
+      background-color: white;
+  
+      td,
+      th {
+        text-align: center;
+        padding: 14px 8px;
+        font-size: 14px;
+        text-transform: capitalize;
+      }
+  
+      td {
+        border-right: 1px solid #f8f8f8;
+        font-size: 12px;
+      }
+  
+      thead th {
+        color: white;
+        background: $color-main;
+  
+        &:nth-child(odd) {
+          color: white;
+          background: $keycolor;
+        }
+      }
+      
+      tr:nth-child(even) {
+        background: #F8F8F8;
+      }
+      tr{
+        cursor: pointer;
+        @include hover{
+          background: #abdab0;
+        }
+      }
+    }
+  
+    /* Responsive */
+  
+    @media (max-width: 767px) {
+      .fl-table {
+        display: block;
+        width: 100%;
+      }
+  
+      .table-wrapper:before {
+        content: "Scroll horizontally >";
+        display: block;
+        text-align: right;
+        font-size: 11px;
+        color: white;
+        padding: 0 0 10px;
+      }
+  
+      .fl-table {
+  
+        thead,
+        tbody {
+          display: block;
+        }
+  
+        thead {
+          th {
+            display: block;
+  
+            &:last-child {
+              border-bottom: none;
+            }
+          }
+  
+          float: left;
+        }
+  
+        tbody {
+          width: auto;
+          position: relative;
+          overflow-x: auto;
+        }
+  
+        td,
+        th {
+          padding: 20px .625em .625em .625em;
+          height: 60px;
+          vertical-align: middle;
+          box-sizing: border-box;
+          overflow-x: hidden;
+          overflow-y: auto;
+          max-width: 200px;
+          font-size: 13px;
+          text-overflow: ellipsis;
+        }
+  
+        thead th {
+          width: 130px;
+          text-align: left;
+          border-bottom: 1px solid #f7f7f9;
+        }
+  
+        tbody tr {
+          display: table-cell;
+  
+          &:nth-child(odd) {
+            background: none;
+          }
+        }
+  
+        tr {
+          &:nth-child(even) {
+            background: transparent;
+          }
+  
+          td {
+            &:nth-child(odd) {
+              background: #F8F8F8;
+              border-right: 1px solid #E6E4E4;
+            }
+  
+            &:nth-child(even) {
+              border-right: 1px solid #E6E4E4;
+            }
+          }
+        }
+  
+        tbody td {
+          display: block;
+          text-align: center;
+        }
+      }
+    }
+  }

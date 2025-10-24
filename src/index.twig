@@ -1,0 +1,14 @@
+{% extends "./_templates/layout.twig" %}
+
+{# If rename this file, rename in gulp 'html' task as well #}
+{% block page %}
+	{% include './_templates/components/finance/_FinancialFull.twig' %}
+	{% include './_templates/components/finance/_Listbar.twig' %}
+	{% include './_templates/components/finance/_Notify.twig' %}
+	{% include './_templates/components/finance/_News.twig' %}
+	{# {% include './_templates/components/finance/_About.twig' %} #}
+	{# {% include './_templates/components/_Event_Home.twig' %}
+	{% include './_templates/components/_Old_Student_Success.twig' %}
+	{% include './_templates/components/_AlumniProfile.twig' %} #}
+	{% include './_templates/components/_Partner.twig' %}
+{% endblock %}

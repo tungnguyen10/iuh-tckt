@@ -1,0 +1,39 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title>{{ title }}</title>
+
+  <link rel="icon" type="image/png" href="{{data.assetPath}}/images/favicons/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="{{data.assetPath}}/images/favicons/favicon-16x16.png" sizes="16x16" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
+
+  <link rel="stylesheet" href="https://unpkg.com/js-datepicker/dist/datepicker.min.css">
+  <!-- inject:css -->
+  <!-- endinject -->
+
+</head>
+
+
+<body>
+
+  <!-- HEADER -->
+  {% include './header.twig' %}
+  <!---->
+
+  <!-- MAIN CONTENT -->
+  {% block page %}{% endblock %}
+  <!---->
+
+  <!-- FOOTER -->
+  {% include './footer.twig' %}
+  <!---->
+
+</body>
+<!-- inject:js -->
+  <!-- endinject -->
+</html>

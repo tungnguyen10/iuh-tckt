@@ -1,0 +1,13 @@
+.iuh_page_news {
+  margin: px-rem(100) 0;
+  min-height: 500px;
+  h1{
+    font-size: px-rem(25px);
+  }
+  @include media(sp) {
+    margin: px-rem(60) 0;
+    h1{
+      font-size: px-rem(18px);
+    }
+  }
+}

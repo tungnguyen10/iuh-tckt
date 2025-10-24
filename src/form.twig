@@ -1,0 +1,227 @@
+{% extends "./_templates/layout.twig" %}
+
+{# If rename this file, rename in gulp 'html' task as well #}
+{% block page %}
+	<div class="l-inner">
+		<form id="contact">
+			<div class="form-signup">
+				<div class="row group_contact">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<div class="row">
+							<fieldset class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+								<input class="form-control" placeholder="Tên của bạn" type="text" required="" name="contact[Name]">
+							</fieldset>
+							<fieldset class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+								<input class="form-control" id="Phone" placeholder="Số điện thoại" type="text" pattern="d+" name="contact[Phone]">
+							</fieldset>
+						</div>
+					</div>
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<div class="row">
+							<fieldset class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+								<input class="form-control" id="email1" placeholder="Email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$" required="" name="contact[email]">
+							</fieldset>
+							<fieldset class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+								<input class="form-control" id="Address" placeholder="Địa chỉ" type="text" name="contact[Address]">
+							</fieldset>
+						</div>
+					</div>
+					<fieldset>
+						<select name="data[id]" id="contacttype_id" class="form-control">
+							<option disabled selected value="">
+								-- Vui lòng chọn loại liên hệ, phản hồi --
+							</option>
+							<option value="1">Phòng đào tạo</option>
+							<option value="3">Phòng Quản lý Sau đại học</option>
+							<option value="6">TT Tư vấn và Hỗ trợ sinh viên</option>
+							<option value="2">Trung tâm Thông tin - Truyền thông</option>
+							<option value="4">Quản trị Website</option>
+							<option value="5">Khác</option>
+						</select>
+					</fieldset>
+					<fieldset class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+						<div class="check_box">
+							<input type="checkbox" id="css">
+							<label for="css">CSS</label>
+						</div>
+						<div class="check_box">
+							<input type="checkbox" id="html">
+							<label for="html">html</label>
+						</div>
+						<div class="check_box">
+							<input type="checkbox" id="javascript">
+							<label for="javascript">javascript</label>
+						</div>
+					</fieldset>
+					<fieldset class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+						<div class="custom_radio">
+							<input type="radio" id="featured-1" name="featured" checked><label for="featured-1">Custom Radio Button
+								              1</label>
+						</div>
+						<div class="custom_radio">
+							<input type="radio" id="featured-2" name="featured"><label for="featured-2">Custom Radio Button 2</label>
+						</div>
+						<div class="custom_radio">
+							<input type="radio" id="featured-3" name="featured"><label for="featured-3">Custom Radio Button 3</label>
+						</div>
+					</fieldset>
+					<fieldset class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+						<div class="custom_typefile">
+							<input type="file" id="file"/>
+							<label for="file"/>choose a file</label>
+					</div>
+				</fieldset>
+				<fieldset class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+					<div class="custom_typefile">
+						<input type="file" id="file"/>
+						<label for="file" class="btn-1">upload file</label>
+					</div>
+
+				</fieldset>
+
+
+				<fieldset>
+					<textarea class="form-control content-area" id="comment" placeholder="Nội dung" name="contact[body]" rows="5" required=""></textarea>
+				</fieldset>
+
+			</div>
+		</div>
+	</form>
+
+	<div class="table-wrapper">
+		<table class="fl-table">
+			<thead>
+				<tr>
+					<th>STT</th>
+					<th>đợt test covid-19</th>
+					<th>địa điểm</th>
+					<th>ngày bắt đầu đăng ký</th>
+					<th>ngày kết thúc</th>
+					<th>thao tác</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="font-weight-bold">1</td>
+					<td>Đợt test COVID-19 1</td>
+					<td>Địa điểm 1</td>
+					<td class="text-right">1/1/1</td>
+					<td class="text-right">1/1/1</td>
+					<td>
+						<a class="action-link" title="Đăng ký" href="#">
+							<i class="fas fa-edit"></i>
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td class="font-weight-bold">2</td>
+					<td>Đợt test COVID-19 2</td>
+					<td>Địa điểm 2</td>
+					<td class="text-right">2/2/2</td>
+					<td class="text-right">2/2/2</td>
+					<td>
+						<a class="action-link" title="Đăng ký" href="#">
+							<i class="fas fa-edit"></i>
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td class="font-weight-bold">3</td>
+					<td>Đợt test COVID-19 3</td>
+					<td>Địa điểm 3</td>
+					<td class="text-right">3/3/3</td>
+					<td class="text-right">3/3/3</td>
+					<td>
+						<a class="action-link" title="Đăng ký" href="#">
+							<i class="fas fa-edit"></i>
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td class="font-weight-bold">4</td>
+					<td>Đợt test COVID-19 4</td>
+					<td>Địa điểm 4</td>
+					<td class="text-right">4/4/4</td>
+					<td class="text-right">4/4/4</td>
+					<td>
+						<a class="action-link" title="Đăng ký" href="#">
+							<i class="fas fa-edit"></i>
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td class="font-weight-bold">5</td>
+					<td>Đợt test COVID-19 5</td>
+					<td>Địa điểm 5</td>
+					<td class="text-right">5/5/5</td>
+					<td class="text-right">5/5/5</td>
+					<td>
+						<a class="action-link" title="Đăng ký" href="#">
+							<i class="fas fa-edit"></i>
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td class="font-weight-bold">6</td>
+					<td>Đợt test COVID-19 6</td>
+					<td>Địa điểm 6</td>
+					<td class="text-right">6/6/6</td>
+					<td class="text-right">6/6/6</td>
+					<td>
+						<a class="action-link" title="Đăng ký" href="#">
+							<i class="fas fa-edit"></i>
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td class="font-weight-bold">7</td>
+					<td>Đợt test COVID-19 7</td>
+					<td>Địa điểm 7</td>
+					<td class="text-right">7/7/7</td>
+					<td class="text-right">7/7/7</td>
+					<td>
+						<a class="action-link" title="Đăng ký" href="#">
+							<i class="fas fa-edit"></i>
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td class="font-weight-bold">8</td>
+					<td>Đợt test COVID-19 8</td>
+					<td>Địa điểm 8</td>
+					<td class="text-right">8/8/8</td>
+					<td class="text-right">8/8/8</td>
+					<td>
+						<a class="action-link" title="Đăng ký" href="#">
+							<i class="fas fa-edit"></i>
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td class="font-weight-bold">9</td>
+					<td>Đợt test COVID-19 9</td>
+					<td>Địa điểm 9</td>
+					<td class="text-right">9/9/9</td>
+					<td class="text-right">9/9/9</td>
+					<td>
+						<a class="action-link" title="Đăng ký" href="#">
+							<i class="fas fa-edit"></i>
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td class="font-weight-bold">10</td>
+					<td>Đợt test COVID-19 10</td>
+					<td>Địa điểm 10</td>
+					<td class="text-right">10/10/10</td>
+					<td class="text-right">10/10/10</td>
+					<td>
+						<a class="action-link" title="Đăng ký" href="#">
+							<i class="fas fa-edit"></i>
+						</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>{% endblock %}

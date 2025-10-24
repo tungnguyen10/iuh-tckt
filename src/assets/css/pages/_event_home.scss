@@ -1,0 +1,319 @@
+.l-event {
+  background: url(../images/top/event-bg.jpg) no-repeat top center/cover;
+  padding: px-rem(65) 0 px-rem(95);
+  color: $color-base;
+
+  @include media(sp) {
+    padding: px-rem(55) 0 px-rem(30);
+  }
+
+  .l-inner {
+    display: flex;
+
+    @include media(sp) {
+      flex-direction: column;
+    }
+  }
+
+  &__boxTxt {
+    width: px-rem(500);
+
+    @include media(tb) {
+      width: px-rem(540);
+    }
+
+    @include media(sp) {
+      width: 100%;
+    }
+
+    .element-title {
+      padding-top: px-rem(5);
+      padding-bottom: px-rem(7);
+
+      @include media(sp) {
+        text-align: center;
+      }
+    }
+
+    .txt {
+      font-size: px-rem(16);
+      line-height: 2.8125;
+      max-width: px-rem(470);
+      padding-bottom: px-rem(25);
+      text-align: justify;
+
+      @include media(sp) {
+        max-width: 100%;
+        line-height: 2.2;
+        padding-bottom: px-rem(20);
+      }
+
+      i {
+        margin-right: px-rem(5);
+        font-size: px-rem(18);
+
+        @include media(sp) {
+          font-size: px-rem(16);
+        }
+      }
+    }
+
+  }
+
+  &__boxSlider {
+    // option 1
+    // max-width: px-rem(670);
+
+    // @include media(sp) {
+    //   max-width: 100%;
+    // }
+
+
+    // .slick-slide {
+    //   background: #fff;
+    //   margin-right: px-rem(30);
+    //   width: px-rem(320);
+    //   border-radius: px-rem(8);
+    //   overflow: hidden;
+    //   text-align: center;
+    //   padding: px-rem(30) 0 px-rem(28);
+    //   transition: all 0.5s ease;
+    //   cursor: pointer;
+
+    //   @include media(sp) {
+    //     width: px-rem(280);
+    //     margin-right: px-rem(20);
+    //   }
+
+    //   @include media(pcOnly) {
+    //     &:hover {
+    //       background: rgb(253, 0, 1);
+    //       background: linear-gradient(315deg, rgba(253, 0, 1, 1) 0%, rgba(153, 26, 77, 1) 50%, rgba(53, 51, 152, 1) 100%);
+    //       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    //       .alumni-ttl,
+    //       .alumni-ttls,
+    //       .alumni-sns .i-fb i,
+    //       .alumni-sns .i-ins i,
+    //       .alumni-sns .i-twi i {
+    //         color: #fff;
+    //       }
+
+    //       .alumni-sns {
+    //         .i-ins i {
+    //           background: inherit;
+    //           -webkit-text-fill-color: aliceblue;
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
+    // END OPTION 1
+
+    // option 2
+    position: relative;
+    width: 100%;
+
+    .slick-slide {
+      overflow: hidden;
+      text-align: center;
+      transition: all 0.5s ease;
+    }
+
+    .alumni-box {
+      .alumni-img {
+        width: px-rem(200);
+        height: px-rem(200);
+        border-radius: 50%;
+        margin: 0 auto px-rem(25);
+        overflow: hidden;
+
+        @include media(sp) {
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+
+      .alumni-ttl {
+        color: #333333;
+        text-transform: uppercase;
+        font-size: px-rem(20);
+        line-height: 1.25;
+        padding-bottom: px-rem(10);
+        font-weight: 500;
+
+        @include media(sp) {
+          font-size: px-rem(18);
+        }
+      }
+
+      .alumni-ttls {
+        color: #333399;
+        font-size: px-rem(17);
+        line-height: 1.47;
+        padding-bottom: px-rem(14);
+
+        @include media(sp) {
+          font-size: px-rem(14);
+        }
+      }
+
+      .alumni-sns {
+        display: flex;
+        justify-content: center;
+
+        li {
+          margin: 0 px-rem(10);
+        }
+
+        i {
+          font-size: px-rem(30);
+        }
+
+        .i-fb {
+          i {
+            color: #1e4fad;
+          }
+        }
+
+        .i-ins {
+          i {
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+
+        .i-twi {
+          i {
+            color: #1ba5d4;
+          }
+        }
+      }
+    }
+
+  }
+
+  .txt {
+    font-size: px-rem(16);
+    line-height: 2.5;
+    // max-width: px-rem(470);
+    padding-bottom: px-rem(25);
+    text-align: justify;
+
+    @include media(sp) {
+      max-width: 100%;
+      line-height: 2.2;
+      padding-bottom: px-rem(20);
+    }
+
+    i {
+      margin-right: px-rem(5);
+      font-size: px-rem(18);
+
+      @include media(sp) {
+        font-size: px-rem(16);
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: block;
+
+    &_content {
+      display: flex;
+      flex-wrap: wrap;
+
+      .left {
+        width: 60%;
+        box-sizing: border-box;
+        padding-right: 5%;
+        @include media(sp) {
+          width: 100%;
+          padding-right: 0%;
+        }
+        h2{
+          padding-top: px-rem(10);
+          text-align: left;
+        }
+      }
+
+      .right {
+        width: 40%;
+        @include media(sp) {
+          width: 100%;
+        }
+        .photo {
+          overflow: hidden;
+          height: 100%;
+          padding-top: 56.25%;
+          position: relative;
+          img{
+            position: absolute;
+            object-fit: cover;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            min-height: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .slider__arrows {
+    display: flex;
+    align-items: center;
+
+    @include media(sp) {
+      justify-content: center;
+      margin-top: px-rem(30);
+    }
+
+    .arrow-icon {
+      width: px-rem(50);
+      height: px-rem(50);
+      background: #fff;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      margin-right: px-rem(10);
+
+      @include media(sp) {
+        width: px-rem(40);
+        height: px-rem(40);
+      }
+
+      @include media(pcOnly) {
+        &:hover {
+          background: #333399;
+          border: 1px solid #fff;
+
+          i {
+            color: #fff;
+          }
+        }
+      }
+
+      i {
+        color: #333399;
+        font-size: px-rem(25);
+
+        @media all and (-ms-high-contrast: none) {
+          padding-left: 0rem;
+          padding-top: 0rem;
+        }
+      }
+    }
+
+    
+  }
+
+}

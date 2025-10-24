@@ -1,0 +1,234 @@
+/* ===== Setting ===== */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+html {
+  font-size: px-per($font-size-base, 16);
+}
+
+body {
+  background: $color-base;
+  font-size: px-rem($font-size-md);
+  font-weight: 400;
+  font-family: $font-barlow;
+  font-feature-settings: "palt";
+  color: $color-black;
+  line-height: 1.5;
+  overflow-x: hidden;
+  letter-spacing: 0.02em;
+
+  &.is-locked {
+    @include media(sp) {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @include media(sp) {
+    min-width: 320px;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:-ms-input-placeholder {
+  color: $color-placeholder;
+  opacity: 1;
+}
+
+::-ms-input-placeholder {
+  color: $color-placeholder;
+  opacity: 1;
+}
+
+::placeholder {
+  color: $color-placeholder;
+  opacity: 1;
+}
+
+@include media(sp) {
+  html {
+    font-size: px-vw($font-size-base, $width-base-sp);
+  }
+
+  img {
+    width: auto;
+  }
+}
+
+@include media(pc) {
+
+  a,
+  a::before,
+  a::after,
+  button,
+  input[type="submit"],
+  a *,
+  a *::before,
+  a *::after,
+  button * {
+    // transition: all 0.3s ease;
+  }
+}
+
+@media screen and (min-width: $bp-tb) and (max-width: $bp-pc) {
+  html {
+    font-size: px-vw($font-size-base, $width-base-pc);
+  }
+}
+
+#wrapper {
+  overflow: hidden;
+
+  @include media(pc) {
+    margin: 0 auto;
+  }
+}
+
+select,
+textarea,
+// input[type="text"],
+// input[type="email"],
+// input[type="number"],
+// input[type="tel"],
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 0;
+  line-height: 1;
+  box-sizing: border-box;
+  //outline: none;
+  border-radius: 0;
+  border: none;
+  background: none;
+  font-size: 1.6rem;
+  font-family: $font-barlow;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+// input[type="text"],
+// input[type="email"],
+// input[type="tel"] {
+//   width: 100%;
+//   border: 1px solid $color-sub;
+//   background: #fff;
+//   padding: 0 15px;
+//   box-sizing: border-box;
+//   height: 44px;
+//   line-height: 44px;
+//   font-size: 1.6rem;
+// }
+
+select {
+  cursor: pointer;
+  width: 100%;
+  padding: 0 40px 0 15px;
+  border: 1px solid $color-sub;
+  background: #fff;
+  height: 44px;
+  font-size: 1.6rem;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+textarea {
+  resize: none;
+  width: 100%;
+  line-height: 1.5;
+  border: 1px solid $color-sub;
+  background: #fff;
+  font-size: 1.6rem;
+  padding: 15px;
+  font: inherit;
+}
+
+input[type="button"],
+input[type="submit"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  line-height: 1;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+@include media(sp) {
+
+  select,
+  textarea,
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  input[type="tel"] {
+    font-size: 1.6rem;
+  }
+}
+
+body.modal--open {
+  overflow: hidden;
+}
+
+
+// main content
+
+.element-title {
+  font-size: px-rem(38);
+  font-weight: bold;
+  font-weight: 700;
+  font-family: $font-josefin;
+  text-transform: uppercase;
+
+  @include media(sp) {
+    font-size: px-rem(22);
+  }
+  &_content{
+    font-size: px-rem(28);
+    margin-bottom: px-rem(30);
+    @include media(sp) {
+      font-size: px-rem(22);
+      margin-bottom: px-rem(20);
+    }
+  }
+  &__small {
+    font-size: px-rem(17);
+    font-weight: 500;
+    display: block;
+    font-family: $font-barlow;
+    padding-bottom: px-rem(15);
+    text-transform: none;
+
+    @include media(sp) {
+      font-size: px-rem(14);
+    }
+  }
+}
+
+.is-animate {
+  opacity: 0;
+  transform: translateY(20px);
+
+  &.is-animated {
+    opacity: 1;
+    transform: translateY(0);
+    transition-duration: 0.6s;
+    transition-delay: 0.5s;
+  }
+}
+

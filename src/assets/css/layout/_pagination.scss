@@ -1,0 +1,77 @@
+.pagination {
+  justify-content: center;
+  margin-bottom: 0%;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: px-rem(50);
+  padding: 0;
+
+  .page-item {
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: #000000;
+    margin: 0 7px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+    border-radius: 100%;
+
+    @include media(sp) {
+      line-height: 42px;
+      font-size: 24px;
+      width: 40px;
+      height: 40px;
+    }
+
+    &:first-child,
+    &:last-child {
+      color: $color-main;
+    }
+
+
+    &:hover,
+    &.active {
+      color: #FFFFFF;
+    }
+
+  }
+
+  &-caution {
+    .page-item {
+
+      &:first-child,
+      &:last-child {
+        color: $color-caution;
+
+      }
+
+      &:hover,
+      &.active {
+        background: $color-caution;
+        color: #FFFFFF;
+      }
+    }
+  }
+
+  &-blue{
+    .page-item {
+
+      &:first-child,
+      &:last-child {
+        color: $color-main;
+      }
+
+      &:hover,
+      &.active {
+        background: $color-main;
+        color: #FFFFFF;
+      }
+    }
+  }
+}

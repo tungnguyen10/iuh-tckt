@@ -1,0 +1,150 @@
+.box-list-profile {
+  margin: px-rem(100) 0;
+ 
+  @include media(sp) {
+    margin: px-rem(60) 0;
+  }
+
+  &__search-select {
+    margin-bottom: px-rem(50);
+  }
+
+  &__button {
+    display: inline-block;
+    margin: 4px 2px;
+    background-color: $color-main;
+    font-size: 14px;
+    padding-left: 32px;
+    padding-right: 32px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    @include hover {
+      transition-duration: 0.4s;
+      -moz-transition-duration: 0.4s;
+      -webkit-transition-duration: 0.4s;
+      -o-transition-duration: 0.4s;
+      background: #fd0001;
+      background: linear-gradient(90deg, #fd0001 0%, #991a4d 50%, #353398 100%);
+      color: #fff;
+    }
+  }
+
+  form {
+    display: flex;
+    justify-content: flex-end;
+    gap: px-rem(15);
+  }
+  
+  &__search-select {
+    position: relative;
+    display: block;
+    vertical-align: bottom;
+   
+  }
+
+  &__search-container {
+    position: relative;
+    display: inline-block;
+    margin: 0 px-rem(0);
+    height: 50px;
+    width: 50px;
+    vertical-align: bottom;
+    flex-shrink: 0;
+  }
+
+  &__mglass {
+    display: inline-block;
+    pointer-events: none;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+  }
+
+  &__searchbutton {
+    position: absolute;
+    font-size: 22px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__search:focus+&__searchbutton {
+    transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s;
+    background: #fd0001;
+    background: linear-gradient(90deg, #fd0001 0%, #991a4d 50%, #353398 100%);
+    color: #fff;
+  }
+
+  &__search {
+    position: absolute;
+    left: 49px;
+    /* Button width-1px (Not 50px/100% because that will sometimes show a 1px line between the search box and button) */
+    background-color: white;
+    outline: none;
+    border: none;
+    padding: 0;
+    width: 0;
+    height: 100%;
+    z-index: 10;
+    transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s;
+  }
+
+  &__search:focus {
+    width: 363px;
+    /* Bar width+1px */
+    padding: 0 16px 0 0;
+    @include media(sp){
+      width: 200px;
+    }
+  }
+
+  &__expandright {
+    left: auto;
+    right: 49px;
+    /* Button width-1px */
+  }
+
+  &__expandright:focus {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    padding: 0 0 0 16px;
+  }
+  .box-list-profile__input_search{
+    padding: 0 40px 0 15px;
+    border: 1px solid #8d99ac;
+    width: 30%;
+    -webkit-border-radius: 0%;
+    -moz-border-radius: 0%;
+    border-radius: 0%;
+  }
+  &__select {
+    display: inline-block;
+    width: px-rem(300);
+    height: 50px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3C!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z'/%3E%3C/svg%3E") no-repeat;
+    background-position: 95% center;
+    background-size: 5%;
+    flex: 1;
+  }
+}
+
+.qs-datepicker-container {
+  font-size: 1.5rem;
+}

@@ -1,0 +1,44 @@
+/* ===== others ===== */
+.u-clearfix::after {
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+  content: "";
+}
+
+@include media(sp) {
+  .u-onlyPC {
+    display: none !important;
+  }
+
+  .u-block_sp {
+    display: block !important;
+  }
+
+  .u-inline_sp {
+    display: inline !important;
+  }
+
+  .u-inlineBlock_sp {
+    display: inline-block !important;
+  }
+}
+
+@include media(pc) {
+  .u-onlySP {
+    display: none !important;
+  }
+
+  .u-block {
+    display: block !important;
+  }
+
+  .u-inline {
+    display: inline !important;
+  }
+
+  .u-inlineBlock {
+    display: inline-block !important;
+  }
+}

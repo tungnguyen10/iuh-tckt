@@ -1,0 +1,89 @@
+@keyframes drift {
+  from {
+    transform: translateX(-100%) rotate(0deg);
+  }
+
+  from {
+    transform: translateX(-100%) rotate(360deg);
+  }
+}
+
+.login-page {
+  padding: px-rem(100) 0;
+  position: relative;
+  overflow: hidden;
+
+  &::before,&::after {
+    content: '';
+    opacity: .6;
+    position: absolute;
+    bottom: -40%;
+    left: 50%;
+    background: #f93300;
+    width: 1000px;
+    height: 1000px;
+    transform-origin: 50% 50%;
+    border-radius: 30%;
+  }
+  &::before {
+    animation: drift 7000ms infinite cubic-bezier(0.72, 0.04, 0.57, 1);
+  }
+  &::after{
+    animation: drift 3000ms infinite cubic-bezier(0.33, 0.13, 0.57, 1);
+    opacity: .2;
+    background: #050093;
+  }
+
+  .form {
+    position: relative;
+    z-index: 1;
+    background: rgba(255,255,255,0.5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.25);
+    max-width: 500px;
+    margin: 0 auto;
+    padding: px-rem(45);
+    text-align: center;
+    border-radius: px-rem(20);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+
+    @include media(sp) {
+      padding: px-rem(45) px-rem(25);
+    }
+
+    input {
+      outline: 0;
+      background: #fff;
+      width: 100%;
+      border: 0;
+      margin: 0 0 15px;
+      padding: 15px;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+
+    button {
+      width: 100%;
+      span{
+        width: 100% !important;
+      }
+    }
+
+    .message {
+      margin: px-rem(15) 0 0;
+      color: #333;
+      font-size: px-rem(14);
+
+      a {
+        color: $color-main;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+
+    .register-form {
+      display: none;
+    }
+  }
+}

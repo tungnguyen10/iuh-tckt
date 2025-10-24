@@ -1,0 +1,62 @@
+// ===== Size ===== //
+@function px-vw($size, $stage, $digits: 3) {
+	@return decimal-round(calc($size / $stage) * 100, $digits) * 1vw;
+}
+
+@function px-per($size, $stage, $digits: 3) {
+	@return decimal-round(calc($size / $stage) * 100, $digits) * 1%;
+}
+
+@function px-rem($size, $digits: 3) {
+	@if $size == 0 {
+		@return $size;
+	} @else {
+		@return decimal-round(calc($size / $font-size-base), $digits, floor) * 1rem;
+	}
+}
+
+@function get_vw($size, $viewport) {
+	$rate: 100 / $viewport;
+	@return $rate * $size * 1vw;
+}
+
+@function strip-unit($number) {
+	@if type-of($number) == 'number' and not unitless($number) {
+		@return calc($number / ($number * 0 + 1px));
+	}
+	@return $number;
+}
+
+// $mode: round or ceil or floor
+@function decimal-round($num, $digits: 0, $mode: round) {
+	$n: 1;
+	$num: strip-unit($num);
+
+	@if type-of($num) != number {
+		@warn '#{$num} is not a number.';
+		@return $num;
+	}
+
+	@if type-of($digits) != number {
+		@warn '#{$digits} is not a number.';
+		@return $num;
+	}@else if not unitless($digits) {
+		@warn '#{$digits} has a unit.';
+		@return $num;
+	}
+
+	@for $i from 1 through $digits {
+		$n: $n * 10;
+	}
+
+	@if $mode == round {
+		@return calc(round($num * $n) / $n);
+	} @else if $mode == ceil {
+		@return ceil($num * $n) / $n;
+	} @else if $mode == floor {
+		@return calc(floor($num * $n) / $n);
+	} @else {
+		@warn '#{$mode} is undefined keyword.';
+		@return $num;
+	}
+}

@@ -1,0 +1,84 @@
+/* ===== Reset ===== */
+*, *::before, *::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #fff;
+	color: #000;
+	text-align: left;
+	-webkit-text-size-adjust: 100%;
+}
+
+main, article, aside, dialog, figure, header, footer, hgroup, nav, section {
+	display: block;
+}
+
+img {
+	border: 0;
+	max-width: 100%;
+	height: auto;
+	line-height: 0;
+	vertical-align: bottom;
+	-ms-interpolation-mode: bicubic;
+	box-sizing: content-box;
+}
+
+svg {
+	max-width: 100%;
+	height: auto;
+	box-sizing: content-box;
+}
+
+ul, ol {
+	list-style-type: none;
+	list-style-position: outside;
+}
+
+table {
+	border: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+caption {
+	text-align: left;
+}
+
+th, td {
+	text-align: left;
+	vertical-align: top;
+}
+
+sub, sup {
+	position: relative;
+	font-size: 80%;
+	line-height: 0;
+	vertical-align: baseline;
+}
+
+sub {
+	bottom: -0.1em;
+}
+
+sup {
+	top: -0.5em;
+}
+
+input, textarea, select, button {
+	border-radius: 0;
+	font: inherit;
+	color: inherit;
+	box-shadow: none;
+	outline: none;
+}
+
+textarea {
+	resize: vertical;
+}
+
+button {
+	cursor: pointer;
+}

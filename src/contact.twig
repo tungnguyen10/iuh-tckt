@@ -1,0 +1,100 @@
+{% extends "./_templates/layout.twig" %}
+
+{# If rename this file, rename in gulp 'html' task as well #}
+{% block page %}
+<div class="page_contact section">
+  <div class="wrapcontact js-animate">
+    <div class="iFrameMap">
+      <div class="map" id="contact_map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62692.591434675145!2d106.66034408595627!3d10.865764662049902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6beba7ae3a0953dd!2sAir%20ticket%20office%20Thanh%20Tung!5e0!3m2!1sen!2s!4v1630750339842!5m2!1sen!2s"
+          style="border:0;" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+  <div class="l-inner">
+    <div class="wrapcontactin">
+      <div class="col-left js-animate">
+        <a class="logo-wrapper" href="/"><img src="assets/images/common/f-logo.png" alt="vé máy bay Thanh Tùng"></a>
+        <p>Tiền thân của Trường Đại học Công nghiệp thành phố Hồ Chí Minh là Trường Huấn nghiệp Gò Vấp do các tu sĩ dòng Don Bosco thành lập 11/11/1956 tại xã Hạnh Thông, Quận Gò Vấp, Tỉnh Gia Định. Năm 1968, Trường được đổi tên thành Trường tư thục Trung học Kỹ thuật đệ nhất cấp Don Bosco. Đến ngày 31/01/1970, Trường được cải biên thành Trường tư thục Trung học Kỹ thuật đệ nhị cấp Don Bosco, được gọi tắt là Trường Trung học Kỹ thuật Don Bosco. </p>
+        <div class="time_work">
+          <div class="itemfooter cont">
+            <div class="r">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Số 12 Nguyễn Văn Bảo, Phường 4, Quận Gò Vấp, Thành phố Hồ Chí Minh</span>
+            </div>
+            <div class="r">
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:dhcn@iuh.edu.vn">dhcn@iuh.edu.vn</a>
+            </div>
+            <div class="r">
+              <i class="fas fa-phone"></i>
+              <a class="fone" href="tel:02839940954">0283.9940 954</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-right js-animate">
+        <div class="section right_contact">
+          <h4 class="element-title">
+            Nhập thông tin của bạn
+          </h4>
+          <div id="pagelogin">
+            <form id="contact">
+              <div class="form-signup">
+                <div class="row group_contact">
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="row">
+                      <fieldset class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <input class="form-control" placeholder="Tên của bạn" type="text" required=""
+                          name="contact[Name]">
+                      </fieldset>
+                      <fieldset class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <input class="form-control" id="Phone" placeholder="Số điện thoại" type="text" pattern="d+"
+                          name="contact[Phone]">
+                      </fieldset>
+                    </div>
+                  </div>
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="row">
+                      <fieldset class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <input class="form-control" id="email1" placeholder="Email" type="email"
+                          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$" required="" name="contact[email]">
+                      </fieldset>
+                      <fieldset class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <input class="form-control" id="Address" placeholder="Địa chỉ" type="text"
+                          name="contact[Address]">
+                      </fieldset>
+                    </div>
+                  </div>
+                  <fieldset>
+                    <select name="data[id]" id="contacttype_id" class="form-control">
+                      <option disabled selected value=""> -- Vui lòng chọn loại liên hệ, phản hồi -- </option>
+                      <option value="1">Phòng đào tạo</option>
+                      <option value="3">Phòng Quản lý Sau đại học</option>
+                      <option value="6">TT Tư vấn và Hỗ trợ sinh viên</option>
+                      <option value="2">Trung tâm Thông tin - Truyền thông</option>
+                      <option value="4">Quản trị Website</option>
+                      <option value="5">Khác</option>
+                    </select>
+                  </fieldset>
+                  <fieldset>
+                    <textarea class="form-control content-area" id="comment" placeholder="Nội dung" name="contact[body]"
+                      rows="5" required=""></textarea>
+                  </fieldset>
+                  <fieldset>
+                    <button class="btn1 rotate-button" type="submit"> 
+                      <span class="rotate-button-face">Gửi ngay</span>
+                      <span class="rotate-button-face-back">Click</span>
+                    </button>
+                  </fieldset>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

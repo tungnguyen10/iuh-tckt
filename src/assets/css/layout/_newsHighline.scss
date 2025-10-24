@@ -1,0 +1,38 @@
+.NewsHighline {
+  @include media(sp) {
+   margin-bottom: px-rem(20);
+  }
+  h2 {
+    background: $color-main;
+    color: #fff;
+    font-weight: 700;
+    padding: 12px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-bottom: 0;
+    @include media(sp) {
+      margin-top: px-rem(50px);
+    }
+    span{
+      padding-bottom: 0;
+    }
+  }
+  &-blogs{
+    border: 1px solid #cdcdcd;
+    padding: 5px 10px;
+    border-top: none;
+  }
+  &-item{
+    border-bottom: 1px solid #ebebeb;
+    padding: px-rem(5) px-rem(10);
+    margin: px-rem(5) 0;
+    @include transition;
+    @include hover{
+      color: $color-main;
+    }
+    i{
+      display: inline-block;
+      margin-right: px-rem(5);
+    }
+  }
+}

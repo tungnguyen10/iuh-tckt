@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+//==========================================================================
+//_inner.scss
+//==========================================================================
+
+//-----------------------------------------------------------------
+//.l-inner
+//-----------------------------------------------------------------
+.l-inner {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: px-rem(15);
+  padding-right: px-rem(15);
+  position: relative;
+  max-width: $bp-pc;
+  @include media(tb) {
+    padding-left: px-rem(30);
+    padding-right: px-rem(30);
+  }
+  @include media(sp) {
+    padding-left: px-rem(20);
+    padding-right: px-rem(20);
+  }
+}

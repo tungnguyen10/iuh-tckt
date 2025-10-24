@@ -1,0 +1,112 @@
+.align-items-center{
+  align-items: center;
+}
+.card-profile {
+  background: #fff;
+  margin-right: px-rem(30);
+  width: 100%;
+  border-radius: px-rem(8);
+  overflow: hidden;
+  text-align: center;
+  padding: px-rem(30) 0 px-rem(28);
+  transition: all 0.5s ease;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  cursor: pointer;
+  margin-bottom: px-rem(30);
+  @include media(sp) {
+    margin-right: px-rem(20);
+  }
+
+  @include media(pcOnly) {
+    &:hover {
+      background: rgb(253, 0, 1);
+      background: linear-gradient(315deg, rgba(253, 0, 1, 1) 0%, rgba(153, 26, 77, 1) 50%, rgba(53, 51, 152, 1) 100%);
+
+      .card-profile-ttl,
+      .card-profile-ttls,
+      .card-profile-sns .i-fb i,
+      .card-profile-sns .i-ins i,
+      .card-profile-sns .i-twi i {
+        color: #fff;
+      }
+
+      .card-profile-sns {
+        .i-ins i {
+          background: inherit;
+          -webkit-text-fill-color: aliceblue;
+        }
+      }
+    }
+  }
+
+  .card-profile-img {
+    width: px-rem(200);
+    height: px-rem(200);
+    // border-radius: 50%;
+    margin: 0 auto px-rem(25);
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+
+  .card-profile-ttl {
+    color: #333333;
+    text-transform: uppercase;
+    font-size: px-rem(20);
+    line-height: 1.25;
+    padding-bottom: px-rem(10);
+    font-weight: 500;
+
+    @include media(sp) {
+      font-size: px-rem(18);
+    }
+  }
+
+  .card-profile-ttls {
+    color: #333399;
+    font-size: px-rem(17);
+    line-height: 1.47;
+    padding-bottom: px-rem(14);
+
+    @include media(sp) {
+      font-size: px-rem(14);
+    }
+  }
+
+  .card-profile-sns {
+    display: flex;
+    justify-content: center;
+
+    li {
+      margin: 0 px-rem(10);
+    }
+
+    i {
+      font-size: px-rem(30);
+    }
+
+    .i-fb {
+      i {
+        color: #1e4fad;
+      }
+    }
+
+    .i-ins {
+      i {
+        background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    .i-twi {
+      i {
+        color: #1ba5d4;
+      }
+    }
+  }
+}

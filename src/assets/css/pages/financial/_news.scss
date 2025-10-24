@@ -1,0 +1,278 @@
+.l-financial-news {
+  // background: url(../images/top/alumniProfile-bg.jpg) no-repeat top center/cover;
+  padding: px-rem(48) 0 0;
+  color: $color-base;
+
+  @include media(sp) {
+    padding: px-rem(30) 0 0;
+  }
+
+  .element-title {
+    text-align: center;
+    margin-bottom: px-rem(33);
+    color: black;
+
+    @include media(sp) {
+      margin-bottom: px-rem(20);
+    }
+  }
+
+  .l-financial-news__list {
+    padding-bottom: px-rem(44);
+
+    @include media(sp) {
+      padding-bottom: px-rem(30);
+    }
+    .slick-slide {
+      width: px-rem(570);
+      background: #fff;
+      margin-right: px-rem(30);
+      padding: 0;
+      position: relative;
+      box-sizing: border-box;
+      border-radius: px-rem(10);
+      border: 1px solid #ececec;
+      overflow: hidden;
+
+      @include media(pcOnly) {
+        &:hover {
+          .icon-quote i {
+            color: #333399;
+          }
+        }
+      }
+
+      @include media(tb) {
+        width: px-rem(594);
+      }
+
+      @include media(sp) {
+        width: px-rem(334);
+        padding: 0;
+      }
+    }
+    .financialNews-box {
+      display: flex !important;
+      overflow: hidden;
+      @include media(sp) {
+        flex-direction: column;
+      }
+      flex-direction: row;
+      cursor: pointer;
+      .financialNews-img {
+        border-radius: 1rem;
+        width: 30%;
+        flex-shrink: 0;
+        position: relative;
+        height: 100%;
+        overflow: hidden;
+        aspect-ratio: 0.82;
+        @include media(sp) {
+          width: 100%;
+          margin-bottom: px-rem(20px);
+          border-radius: px-rem(0);
+          aspect-ratio: 16/9;
+        }
+        img {
+          transition: all 0.3s ease-in-out;
+          object-fit: cover;
+          transition: all 0.3s ease-in-out;
+          object-fit: cover;
+          position: absolute;
+          width: 100%;
+          min-height: 100%;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      .financialNews-info {
+        display: flex;
+        flex-direction: column;
+        padding: 2% 3%;
+        @include media(sp) {
+          padding-bottom: 8%;
+          padding-left: 5%;
+          padding-right: 5%;
+        }
+        .financialNews-txt {
+          color: #666;
+          font-size: px-rem(16);
+          line-height: 1.875;
+          font-style: italic;
+          text-align: justify;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+        .financialNews-inner {
+          width: calc(100%);
+          .financialNews-ttl {
+            transition: all 0.3s ease-in-out;
+            color: $color-accent;
+            text-transform: uppercase;
+            font-size: px-rem(20);
+            margin-bottom: px-rem(10);
+            font-weight: 550;
+            transition: all 0.3s ease-in-out;
+            line-height: 1.25;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+
+            @include media(sp) {
+              font-size: px-rem(18);
+            }
+          }
+        }
+        .event-link {
+          transition: all 0.3s ease-in-out;
+          color: $color-accent;
+          margin-left: 0;
+          margin-top: px-rem(10);
+          i {
+            transition: all 0.3s ease-in-out;
+            font-size: px-rem(16px);
+            position: relative;
+            color: $color-accent;
+            left: 0;
+          }
+        }
+      }
+      &:hover {
+        .financialNews-img {
+          img {
+            transform: translate(-50%, -50%) scale(1.2);
+          }
+        }
+        .financialNews-info {
+          .financialNews-ttl,
+          .event-link {
+            color: $color-caution;
+            i {
+              color: $color-caution;
+              left: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    .slider__arrows {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: px-rem(34);
+
+      @include media(sp) {
+        justify-content: center;
+        margin-top: px-rem(20);
+      }
+
+      .arrow-icon {
+        width: px-rem(60);
+        height: px-rem(60);
+        background: #fff;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        margin: 0 px-rem(10);
+        box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.3);
+
+        @include media(sp) {
+          width: px-rem(40);
+          height: px-rem(40);
+        }
+
+        @include media(pcOnly) {
+          &:hover {
+            i {
+              color: #333399;
+            }
+          }
+        }
+
+        i {
+          color: #000;
+          font-size: px-rem(25);
+        }
+      }
+    }
+  }
+
+  .l-financial-news__intro {
+    background: #ff0000;
+    border-radius: px-rem(15) px-rem(15) 0 0;
+    padding: px-rem(45) 0 px-rem(37);
+    display: flex;
+    flex-wrap: wrap;
+
+    @include media(sp) {
+      padding: px-rem(20) px-rem(10) px-rem(20);
+    }
+
+    .intro-box {
+      width: 25%;
+      padding: 0 px-rem(20) 0 px-rem(27);
+      display: flex;
+      align-items: flex-start;
+      box-sizing: border-box;
+
+      @include media(sp) {
+        width: 70%;
+        margin: 0 auto;
+        padding: px-rem(10) px-rem(10) px-rem(10);
+      }
+
+      &__img {
+        width: px-rem(68);
+        flex-shrink: 1;
+
+        @include media(sp) {
+          width: px-rem(50);
+        }
+      }
+
+      &__inner {
+        padding-left: px-rem(15);
+
+        @include media(sp) {
+          padding-left: px-rem(10);
+        }
+
+        .num {
+          font-size: px-rem(35);
+          font-weight: 500;
+          display: flex;
+          align-items: flex-start;
+          line-height: 1;
+          padding-bottom: px-rem(7);
+
+          @include media(sp) {
+            font-size: px-rem(25);
+          }
+
+          span {
+            font-size: px-rem(20);
+
+            @include media(sp) {
+              font-size: px-rem(15);
+            }
+          }
+        }
+
+        .title {
+          font-size: px-rem(18);
+
+          @include media(sp) {
+            font-size: px-rem(15);
+          }
+        }
+      }
+    }
+  }
+}

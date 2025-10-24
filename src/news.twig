@@ -1,0 +1,42 @@
+{% extends "./_templates/layout.twig" %}
+
+{# If rename this file, rename in gulp 'html' task as well #}
+
+{% block page %}
+{% include './_templates/components/_Breadcrumb.twig' %}
+<div class="iuh_page_news">
+  <div class="container">
+    <div class="row">
+    <h1 class="element-title element-title_content col-12">Tin Tức</h1>
+      <div class="col-12 col-sm-6 col-md-4">
+        {% include './_templates/components/_Card_News.twig' %}
+      </div>
+      <div class="col-12 col-sm-6 col-md-4">
+        {% include './_templates/components/_Card_News.twig' %}
+      </div>
+      <div class="col-12 col-sm-6 col-md-4">
+        {% include './_templates/components/_Card_News.twig' %}
+      </div>
+      <div class="col-12 col-sm-6 col-md-4">
+        {% include './_templates/components/_Card_News.twig' %}
+      </div>
+      <div class="col-12 col-sm-6 col-md-4">
+        {% include './_templates/components/_Card_News.twig' %}
+      </div>
+      <div class="col-12 col-sm-6 col-md-4">
+        {% include './_templates/components/_Card_News.twig' %}
+      </div>
+      <div class="col-12 col-sm-6 col-md-4">
+        {% include './_templates/components/_Card_News.twig' %}
+      </div>
+      <div class="col-12 col-sm-6 col-md-4">
+        {% include './_templates/components/_Card_News.twig' %}
+      </div>
+      <div class="col-12 col-sm-6 col-md-4">
+        {% include './_templates/components/_Card_News.twig' %}
+      </div>
+    </div>
+    {% include './_templates/components/_Pagination.twig' %}
+  </div>
+</div>
+{% endblock %}

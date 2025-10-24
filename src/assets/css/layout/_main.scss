@@ -1,0 +1,11 @@
+/* ===== Main ===== */
+.l-main {
+    display: block;
+    padding-top: px-rem(120);
+    @include media(tb) {
+        padding-top: px-rem(60);
+        @include media(sp) {
+            padding-top: px-rem(60);
+        }
+    }
+}
