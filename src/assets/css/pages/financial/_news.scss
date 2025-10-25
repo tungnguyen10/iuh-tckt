@@ -1,7 +1,7 @@
 .l-financial-news {
   // background: url(../images/top/alumniProfile-bg.jpg) no-repeat top center/cover;
   padding: px-rem(48) 0 0;
-  color: $color-base;
+  color: $color-main-white;
 
   @include media(sp) {
     padding: px-rem(30) 0 0;
@@ -23,6 +23,7 @@
     @include media(sp) {
       padding-bottom: px-rem(30);
     }
+
     .slick-slide {
       width: px-rem(570);
       background: #fff;
@@ -51,14 +52,17 @@
         padding: 0;
       }
     }
+
     .financialNews-box {
       display: flex !important;
-      overflow: hidden;
+      flex-direction: row;
+      cursor: pointer;
+      border-radius: 10px;
+
       @include media(sp) {
         flex-direction: column;
       }
-      flex-direction: row;
-      cursor: pointer;
+
       .financialNews-img {
         border-radius: 1rem;
         width: 30%;
@@ -67,12 +71,14 @@
         height: 100%;
         overflow: hidden;
         aspect-ratio: 0.82;
+
         @include media(sp) {
           width: 100%;
           margin-bottom: px-rem(20px);
           border-radius: px-rem(0);
           aspect-ratio: 16/9;
         }
+
         img {
           transition: all 0.3s ease-in-out;
           object-fit: cover;
@@ -86,19 +92,22 @@
           transform: translate(-50%, -50%);
         }
       }
+
       .financialNews-info {
         display: flex;
         flex-direction: column;
         padding: 2% 3%;
+
         @include media(sp) {
           padding-bottom: 8%;
           padding-left: 5%;
           padding-right: 5%;
         }
+
         .financialNews-txt {
           color: #666;
           font-size: px-rem(16);
-          line-height: 1.875;
+          line-height: 1.15;
           font-style: italic;
           text-align: justify;
           display: -webkit-box;
@@ -106,8 +115,10 @@
           -webkit-box-orient: vertical;
           overflow: hidden;
         }
+
         .financialNews-inner {
           width: calc(100%);
+
           .financialNews-ttl {
             transition: all 0.3s ease-in-out;
             color: $color-accent;
@@ -127,33 +138,52 @@
             }
           }
         }
+
         .event-link {
           transition: all 0.3s ease-in-out;
-          color: $color-accent;
+          color: $color-main-white;
           margin-left: 0;
           margin-top: px-rem(10);
+          padding: px-rem(5) px-rem(15);
+          border-radius: px-rem(40px);
+          background: $color-main-blue;
+          max-width: fit-content;
+          position: absolute;
+          bottom: px-rem(10);
+
+          @include media(sp) {
+            position: inherit;
+          }
+
           i {
+            padding-left: px-rem(4);
             transition: all 0.3s ease-in-out;
-            font-size: px-rem(16px);
+            font-size: px-rem(12px);
             position: relative;
-            color: $color-accent;
             left: 0;
           }
         }
       }
+
       &:hover {
+        border: 1px solid $color-sub-yellow;
+        box-shadow: 2px 2px 15px 0 rgba(249, 178, 0, 0.15);
+
         .financialNews-img {
           img {
             transform: translate(-50%, -50%) scale(1.2);
           }
         }
+
         .financialNews-info {
+
           .financialNews-ttl,
           .event-link {
-            color: $color-caution;
+            color: $color-main-yellow;
+
             i {
-              color: $color-caution;
-              left: 100%;
+              color: $color-main-yellow;
+              transform: rotate(-45deg);
             }
           }
         }
@@ -172,8 +202,8 @@
       }
 
       .arrow-icon {
-        width: px-rem(60);
-        height: px-rem(60);
+        width: px-rem(50);
+        height: px-rem(50);
         background: #fff;
         border-radius: 50%;
         display: flex;
@@ -181,24 +211,28 @@
         align-items: center;
         cursor: pointer;
         margin: 0 px-rem(10);
-        box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.3);
+        box-shadow: 1px 1px 10px 0 rgba($color-main-blue, 0.15) inset;
+        transition: all 0.3s ease;
 
         @include media(sp) {
-          width: px-rem(40);
-          height: px-rem(40);
+          width: px-rem(30);
+          height: px-rem(30);
         }
 
         @include media(pcOnly) {
           &:hover {
+            box-shadow: 1px 1px 10px 0 rgba($color-main-yellow, 0.30) inset;
+
             i {
-              color: #333399;
+              color: $color-main-yellow;
             }
           }
         }
 
         i {
-          color: #000;
-          font-size: px-rem(25);
+          color: $color-main-blue;
+          transition: all 0.3s ease;
+          font-size: px-rem(16);
         }
       }
     }

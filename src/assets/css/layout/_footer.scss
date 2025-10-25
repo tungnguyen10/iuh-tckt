@@ -9,13 +9,13 @@
 //-----------------------------------------------------------------
 
 .l-footer {
-  color: $color-base;
+  color: $color-main-white;
   position: relative;
 
   &__Top {
     background: url(../images/common/f-bg.jpg) no-repeat top center/cover;
     padding: px-rem(32) 0;
-    border-bottom: px-rem(5) solid #ff0000;
+    border-bottom: px-rem(5) solid $color-main-yellow;
 
     .l-inner {
       display: flex;
@@ -45,6 +45,7 @@
         text-transform: uppercase;
         margin-bottom: px-rem(10);
         position: relative;
+        color: $color-sub-blue;
         i {
           opacity: 0;
           @include transition;
@@ -80,11 +81,11 @@
           i {
             width: px-rem(20);
             height: px-rem(20);
-            background: $color-base;
+            background: $color-main-white;
             border-radius: 50%;
             margin-right: px-rem(5);
             font-size: px-rem(12);
-            color: #333399;
+            color: $color-main-blue;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -96,13 +97,13 @@
 
       ul {
         li {
-          color: #cccccc;
+          color: $color-main-white;
 
           a {
             line-height: 2;
 
             &:hover {
-              color: $color-base;
+              color: $color-main-yellow;
               text-decoration: underline;
             }
           }
@@ -127,6 +128,7 @@
     &--cont {
       .f-logo {
         padding-bottom: px-rem(15);
+        max-width:  px-rem(250);
         @include media(sp) {
           text-align: center;
         }
@@ -140,7 +142,7 @@
         }
 
         i {
-          color: #333399;
+          color: $color-main-blue;
         }
 
         .number-of-visits {
@@ -250,7 +252,7 @@
   display: flex;
   color: #fff;
   border-radius: px-rem(30);
-  background: $color-main;
+  background: $color-main-blue;
   text-decoration: none;
   align-items: center;
   justify-content: center;

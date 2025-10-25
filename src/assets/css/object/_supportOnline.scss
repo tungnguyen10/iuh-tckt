@@ -42,7 +42,7 @@
   i {
     width: 40px;
     height: 40px;
-    background: $color-main;
+    background: $color-main-blue;
     color: white;
     border-radius: 100%;
     font-size: 25px;
@@ -60,7 +60,7 @@
     span {
       border-radius: 2px;
       text-align: center;
-      background: $color-main;
+      background: $color-main-blue;
       padding: 9px;
       display: none;
       width: 180px;
@@ -99,7 +99,7 @@
     background-color: transparent;
     border-radius: 100%;
     border: 2px solid rgba(30, 30, 30, 0.4);
-    border-color: $color-main;
+    border-color: $color-main-blue;
     opacity: 0.5;
   }
   .alo-circle-fill {
@@ -111,7 +111,7 @@
     border-radius: 100%;
     border: 2px solid transparent;
     transition: all 0.1s;
-    background-color: $color-main;
+    background-color: $color-main-blue;
     opacity: 0.75;
     right: -10px;
   }

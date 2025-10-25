@@ -31,7 +31,7 @@
 
     &:first-child,
     &:last-child {
-      color: $color-main;
+      color: $color-main-blue;
     }
 
 
@@ -64,12 +64,12 @@
 
       &:first-child,
       &:last-child {
-        color: $color-main;
+        color: $color-main-blue;
       }
 
       &:hover,
       &.active {
-        background: $color-main;
+        background: $color-main-blue;
         color: #FFFFFF;
       }
     }

@@ -9,7 +9,7 @@
 //-----------------------------------------------------------------
 
 .l-header {
-  background: $color-base;
+  background: $color-main-white;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
   width: 100%;
   position: fixed;
@@ -22,20 +22,20 @@
       height: px-rem(30);
       z-index: 8500;
       position: relative;
-      background: rgb(253, 0, 1);
-      background: linear-gradient(90deg, rgba(253, 0, 1, 1) 0%, rgba(153, 26, 77, 1) 50%, rgba(53, 51, 152, 1) 100%);
-    }
+      background: $color-main-blue;
+      
+     }
     @include media(xs) {
       height: px-rem(50);
     }
   }
 
   .l-innerTop {
-    background: rgb(253, 0, 1);
-    background: linear-gradient(90deg, rgba(253, 0, 1, 1) 0%, rgba(153, 26, 77, 1) 50%, rgba(53, 51, 152, 1) 100%);
-
+    background: $color-main-blue;
+    
     @include media(sp) {
       padding-top: px-rem(20);
+      background: linear-gradient(90deg, $color-main-blue 0%, rgba($color-main-blue, 0.75) 100%);
     }
     @include media(xs) {
       padding-top: px-rem(40);
@@ -185,7 +185,7 @@
           }
           &::before {
             content: '';
-            border: 1px solid #3c3c9d;
+            border: 1px solid $color-main-blue;
             border-radius: 50%;
             position: absolute;
             top: px-rem(-3);
@@ -254,7 +254,9 @@
   @include media(pc) {
     display: none;
   }
-
+  &:focus {
+    outline: none;
+  }
   @include media(sp) {
     color: transparent;
     overflow: hidden;
@@ -266,12 +268,12 @@
     top: 0;
     width: px-rem(35);
     z-index: 9001;
-    background: $color-main;
+    background: $color-main-yellow;
     outline: none;
    
     span {
       display: block;
-      background: $color-base;
+      background: $color-main-white;
       width: px-rem(24);
       height: px-rem(2);
       position: absolute;
@@ -283,7 +285,7 @@
       &:after {
         content: "";
         display: block;
-        background: $color-base;
+        background: $color-main-white;
         width: px-rem(24);
         height: px-rem(2);
         position: absolute;
@@ -304,7 +306,7 @@
 
     &.is-open {
       span {
-        background: $color-main;
+        background: $color-main-yellow;
 
         &:before,
         &:after {
@@ -337,7 +339,7 @@
     width: 100%;
     max-width: px-rem(250);
     height: 100%;
-    background: $color-base;
+    background: $color-main-white;
     top: px-rem(30);
     right: 0;
     z-index: 9000;
@@ -393,7 +395,7 @@
       a,
       span {
         font-size: px-rem(15);
-        color: $color-base;
+        color: $color-main-white;
         text-transform: uppercase;
         font-weight: 500;
 
@@ -437,7 +439,7 @@
 
     .l-search {
       font-size: px-rem(15);
-      color: $color-base;
+      color: $color-main-white;
       text-transform: uppercase;
       font-weight: 500;
       position: relative;
@@ -454,7 +456,7 @@
 
       @include media(pcOnly) {
         &:hover {
-          color: $color-caution;
+          color: $color-main-yellow;
         }
       }
     }
@@ -489,13 +491,13 @@
       height: px-rem(40);
       font-size: 1.5rem;
       padding: 0 px-rem(22);
-      color: $color-base;
+      color: $color-main-white;
       text-transform: uppercase;
       font-weight: 500;
 
       @include hover {
-        background: $color-main;
-        color: $color-base;
+        background: $color-main-yellow;
+        color: $color-main-white;
       }
     }
 
@@ -504,7 +506,7 @@
       display: block;
       padding: px-rem(5) px-rem(10);
       text-transform: uppercase;
-      color: $color-base;
+      color: $color-main-white;
     }
 
   }
@@ -524,10 +526,10 @@
     width: 100%;
     position: fixed;
     left: 0;
-    color: $color-base;
+    color: $color-main-white;
     padding: 10px 0;
     display: none;
-    background: rgba($color-main, 0.85);
+    background: rgba($color-main-blue, 0.85);
   }
 
   @include media(sp) {
@@ -548,14 +550,14 @@
     @include media(pc) {
       display: flex;
       justify-content: space-between;
-      border-left: 1px solid $color-sub;
+      border-left: 1px solid $color-sub-blue;
     }
   }
 
   &__item {
     @include media(pc) {
       width: 100%;
-      border-right: 1px solid $color-sub;
+      border-right: 1px solid $color-sub-blue;
     }
 
     &:nth-child(n + 2) {

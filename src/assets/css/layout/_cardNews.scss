@@ -8,7 +8,7 @@
   .card_news_time {
     z-index: 12;
     position: absolute;
-    color: #fff;
+    color: $color-main-white;
     left: 0;
     right: 0;
     bottom: 0;
@@ -28,17 +28,15 @@
       }
       .postTwoGradient {
         height: 100%;
-        background: linear-gradient(
-          00deg,
-          #fd0001 0%,
-          #991a4d 50%,
-          #353398 100%
-        );
-        opacity: 0.7;
+        background: $color-sub-blue;
+        opacity: 0.8;
       }
     }
 
     .card_news_content {
+      h4{
+        color: $color-main-yellow;
+      }
       .card_news_content__button {
         transform: translateY(0);
         opacity: 1;
@@ -60,7 +58,7 @@
 
     .postTwoGradient {
       transition: all 0.5s ease;
-      background: rgba(135, 0, 100, 1);
+      background: $color-main-blue;
       height: 5px;
       width: 100%;
       position: absolute;
@@ -99,7 +97,7 @@
   .card_news_content {
     position: relative;
     padding: px-rem(20) px-rem(20) px-rem(30);
-    background: #fff;
+    background: $color-main-white;
     font-size: px-rem(16);
     @include media(sp) {
       font-size: px-rem(14);
@@ -131,8 +129,8 @@
 
       a {
         font-size: px-rem(16);
-        color: #fff;
-        background: $color-main;
+        color: $color-main-white;
+        background: $color-main-blue;
         display: block;
         padding: px-rem(10) px-rem(15);
         text-decoration: none;

@@ -20,9 +20,9 @@
     .rotate-button-face-back {
       position: absolute;
       display: block;
-      border: 1px solid $color-main;
+      border: 1px solid $color-main-blue;
       transition: all .5s;
-      color: $color-main;
+      color: $color-main-blue;
       text-decoration: none;
       width: px-rem(200);
       height: px-rem(40);
@@ -39,8 +39,8 @@
     }
 
     .rotate-button-face-back {
-      background: linear-gradient(90deg, #fd0001 0%, #991a4d 50%, #353398 100%);
-      color: $color-base;
+      background: $color-main-yellow;
+      color: $color-main-white;
       border: 0px;
       transform: rotateX(-90deg) translateZ(15px);
     }
@@ -55,9 +55,9 @@
   box-sizing: border-box;
   appearance: none;
   background-color: transparent;
-  border: 2px solid #333399;
+  border: 2px solid $color-main-blue;
   border-radius: 0.6em;
-  color: #333399;
+  color: $color-main-blue;
   cursor: pointer;
   display: flex;
   align-self: center;
@@ -85,19 +85,19 @@
     transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
 
     &:hover {
-      box-shadow: 0 0 40px 40px $color-main inset;
+      box-shadow: 0 0 40px 40px $color-main-blue inset;
     }
   }
   // BUTTON 4
   &__fourth {
    margin: 0 2rem;
-    border-color: $color-sub;
-    color: $color-sub;
+    border-color: $color-sub-blue;
+    color: $color-sub-blue;
     @include media(sp){
       padding: 0.7rem 2rem;
     }
     background: {
-      image: linear-gradient(45deg,$color-sub 50%, transparent 50%);
+      image: linear-gradient(45deg,$color-sub-blue 50%, transparent 50%);
       position: 100%;
       size: 400%;
     }
@@ -112,10 +112,9 @@
 .btn-view{
   display: block;
   position: relative;
-  color: white;
+  color: $color-main-white;
   font-size: px-rem(22px);
-  background: #333395; 
-  background: linear-gradient(to right, #333395 0%,#ff0000 100%);
+  background: $color-main-blue; 
   padding: px-rem(8px) px-rem(20px);
   border-radius: px-rem(30px);
   text-align: center;
@@ -127,7 +126,7 @@
     width: 100%;
   }
   &:hover{
-    background: radial-gradient(circle, #333395, #891593, #c80078, #f1004c, #ff0000) !important;
+    background: $color-main-yellow !important;
   }
 }
 .btn-bar{

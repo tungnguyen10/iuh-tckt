@@ -29,7 +29,7 @@
       span {
         font-size: px-rem(12);
         line-height: px-rem(18);
-        color: $color-main;
+        color: $color-main-blue;
         font-weight: 900;
         @include media(sp) {
           font-size: px-rem(10);
@@ -52,7 +52,7 @@
         line-height: px-rem(16);
       }
       &:hover {
-        color: $color-main;
+        color: $color-main-blue;
         font-weight: 550;
       }
     }

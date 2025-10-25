@@ -1,7 +1,7 @@
 .l-event {
   background: url(../images/top/event-bg.jpg) no-repeat top center/cover;
   padding: px-rem(65) 0 px-rem(95);
-  color: $color-base;
+  color: $color-main-white;
 
   @include media(sp) {
     padding: px-rem(55) 0 px-rem(30);

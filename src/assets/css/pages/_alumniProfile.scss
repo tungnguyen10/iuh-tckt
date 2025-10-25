@@ -1,7 +1,7 @@
 .l-alumniProfile {
   background: url(../images/top/alumniProfile-bg.jpg) no-repeat top center/cover;
   padding: px-rem(48) 0 0;
-  color: $color-base;
+  color: $color-main-white;
 
   @include media(sp) {
     padding: px-rem(30) 0 0;

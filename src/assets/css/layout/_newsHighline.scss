@@ -3,7 +3,7 @@
    margin-bottom: px-rem(20);
   }
   h2 {
-    background: $color-main;
+    background: $color-main-blue;
     color: #fff;
     font-weight: 700;
     padding: 12px;
@@ -28,7 +28,7 @@
     margin: px-rem(5) 0;
     @include transition;
     @include hover{
-      color: $color-main;
+      color: $color-main-blue;
     }
     i{
       display: inline-block;

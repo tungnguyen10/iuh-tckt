@@ -6,7 +6,7 @@ html {
 }
 
 body {
-  background: $color-base;
+  background: $color-main-white;
   font-size: px-rem($font-size-md);
   font-weight: 400;
   font-family: $font-barlow;
@@ -135,7 +135,7 @@ select {
   cursor: pointer;
   width: 100%;
   padding: 0 40px 0 15px;
-  border: 1px solid $color-sub;
+  border: 1px solid $color-sub-blue;
   background: #fff;
   height: 44px;
   font-size: 1.6rem;
@@ -149,7 +149,7 @@ textarea {
   resize: none;
   width: 100%;
   line-height: 1.5;
-  border: 1px solid $color-sub;
+  border: 1px solid $color-sub-blue;
   background: #fff;
   font-size: 1.6rem;
   padding: 15px;
