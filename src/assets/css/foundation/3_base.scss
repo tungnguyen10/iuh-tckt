@@ -189,7 +189,7 @@ body.modal--open {
 // main content
 
 .element-title {
-  font-size: px-rem(38);
+  font-size: px-rem(30);
   font-weight: bold;
   font-weight: 700;
   font-family: $font-josefin;
@@ -199,15 +199,15 @@ body.modal--open {
     font-size: px-rem(22);
   }
   &_content{
-    font-size: px-rem(28);
-    margin-bottom: px-rem(30);
+    font-size: px-rem(25);
+    margin-bottom: px-rem(25);
     @include media(sp) {
       font-size: px-rem(22);
       margin-bottom: px-rem(20);
     }
   }
   &__small {
-    font-size: px-rem(17);
+    font-size: px-rem(16);
     font-weight: 500;
     display: block;
     font-family: $font-barlow;
