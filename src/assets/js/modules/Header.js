@@ -17,13 +17,13 @@ export default class Header extends BaseModule {
     const ua = navigator.userAgent;
     if (ua.indexOf('iPhone') !== -1 || ua.indexOf('iPod') !== -1 || ua.indexOf('Android') !== -1 && ua.indexOf('Mobile') !== -1) {
       //sp
-      $('body').addClass('is-view-sp');
+      $('body').addClass('is-view-sp').css('padding-top', $('.l-header').height());
     } else if (ua.indexOf('iPad') !== -1 || ua.indexOf('Android') !== -1) {
       //tab
-      $('body').addClass('is-view-tab');
+      $('body').addClass('is-view-tab').css('padding-top', $('.l-header').height());
     } else {
       // pc
-      $('body').addClass('is-view-pc');
+      $('body').addClass('is-view-pc').css('padding-top', $('.l-header').height());
     }
   }
   //menu
